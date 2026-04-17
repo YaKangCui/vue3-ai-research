@@ -1,7 +1,7 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup lang="ts">
+import UserAdmin from "./components/UserAdmin.vue";
 </script>
 
 <template>
-  <HelloWorld />
+  <UserAdmin />
 </template>
