@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import UserAdmin from "./components/UserAdmin.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <UserAdmin />
+  <RouterView />
 </template>

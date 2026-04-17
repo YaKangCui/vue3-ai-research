@@ -7,6 +7,12 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue()],
+    resolve: {
+      dedupe: ["vue", "vue-router"],
+    },
+    optimizeDeps: {
+      include: ["vue", "vue-router"],
+    },
     server: {
       proxy: {
         "/api": { target: apiTarget, changeOrigin: true },

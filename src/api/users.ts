@@ -51,6 +51,13 @@ export async function listUsers(): Promise<User[]> {
   return envelope.data;
 }
 
+export async function getUser(id: string): Promise<User> {
+  const res = await fetch(`/api/users/${encodeURIComponent(id)}`);
+  const body = await readJsonUnknown(res);
+  const envelope = assertOk(userEnvelopeSchema, res, body);
+  return envelope.data;
+}
+
 export async function createUser(input: { email: string; name: string }): Promise<User> {
   const res = await fetch("/api/users", {
     method: "POST",

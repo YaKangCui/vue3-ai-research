@@ -1,0 +1,187 @@
+/* Shared layout for user CRUD views (global, prefixed with uc-) */
+
+.uc-panel {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.uc-panel__head {
+  margin-bottom: 20px;
+}
+
+.uc-panel__lede {
+  margin-top: 8px;
+  color: var(--text);
+}
+
+.uc-panel h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -0.04em;
+}
+
+.uc-panel h2 {
+  margin: 0 0 12px;
+}
+
+.uc-panel code {
+  font-size: 0.9em;
+}
+
+.uc-alert {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--text-h);
+  margin: 0 0 16px;
+}
+
+.uc-muted {
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.uc-empty {
+  padding: 12px 0 4px;
+}
+
+.uc-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 16px 18px;
+  background: color-mix(in oklab, var(--bg) 92%, var(--border));
+  box-shadow: var(--shadow);
+}
+
+.uc-card--table {
+  padding-bottom: 12px;
+}
+
+.uc-table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.uc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.uc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.uc-field input {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.uc-field input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.uc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.uc-btn {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.uc-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.uc-btn--primary {
+  border-color: transparent;
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.uc-btn--ghost {
+  background: transparent;
+}
+
+.uc-btn--small {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.uc-btn--danger {
+  border-color: color-mix(in oklab, #ef4444 35%, var(--border));
+  color: color-mix(in oklab, #ef4444 85%, var(--text-h));
+}
+
+.uc-table-wrap {
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.uc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.uc-table th,
+.uc-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.uc-table th {
+  font-weight: 500;
+  color: var(--text-h);
+  background: color-mix(in oklab, var(--bg) 88%, var(--border));
+}
+
+.uc-table tbody tr:hover {
+  background: color-mix(in oklab, var(--accent-bg) 55%, transparent);
+}
+
+.uc-actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.uc-actions .uc-btn + .uc-btn {
+  margin-left: 8px;
+}
+
+.uc-mono {
+  font-family: var(--mono);
+  font-size: 14px;
+}
